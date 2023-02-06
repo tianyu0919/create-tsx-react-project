@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --config ./config/webpack.config.dev.js",
+    "prepare": "husky install",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.dev.js",
     "build": "webpack --config ./config/webpack.config.pro.js",
     "tsc": "rm -rf dist-ts && tsc"
   },
@@ -26,6 +27,7 @@
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
     "babel-loader": "^9.1.2",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "eslint": "^8.31.0",
